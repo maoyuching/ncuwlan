@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 from __future__ import print_function
 import os
 import requests
@@ -8,6 +9,7 @@ import sys
 
 username='用户名' #用户名和密码需要更改
 password='你的密码'
+timeWaite=30 #可以设定每个30秒检查网络
 
 def Connect():
 	# 构造请求数据
@@ -80,4 +82,4 @@ while True:
 		print('NCUWLAN, 正在尝试重新连接:)')
 		Connect()
 		print('60s后我会帮您再检测网络\n\n')
-	time.sleep(60)
+	time.sleep(timeWaite)
