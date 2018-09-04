@@ -9,7 +9,7 @@ import sys
 
 username='用户名' #用户名和密码需要更改
 password='你的密码'
-timeWaite=30 #可以设定每个30秒检查网络
+timeWaite=60 #可以设定每个30秒检查网络
 
 def Connect():
 	# 构造请求数据
@@ -77,9 +77,9 @@ while True:
 	nCode = isConnected()
 	if nCode :
 		print('NCUWLAN 畅通')
-		print('60s后我会帮您再检测网络\n\n')
+		print(timeWaite+'s后我会帮您再检测网络\n\n')
 	else:
 		print('NCUWLAN, 正在尝试重新连接:)')
 		Connect()
-		print('60s后我会帮您再检测网络\n\n')
+		print(timeWaite+'s后我会帮您再检测网络\n\n')
 	time.sleep(timeWaite)
