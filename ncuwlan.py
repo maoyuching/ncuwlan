@@ -83,3 +83,4 @@ while True:
 		Connect()
 		print(timeWaite+'s后我会帮您再检测网络\n\n')
 	time.sleep(timeWaite)
+#test
